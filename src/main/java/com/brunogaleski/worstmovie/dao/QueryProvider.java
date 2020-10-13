@@ -13,7 +13,7 @@ public class QueryProvider {
             "        AND n1.id <> n2.id\n" +
             "    ) \n" +
             "    WHERE interval_year >= 0 \n" +
-            "    GROUP BY producer\n" +
+            "    GROUP BY producer, previousWin, followingWin\n" +
             "    ORDER BY interval_year\n" +
             "), \n" +
             "intervals AS (SELECT MIN(interval_year) as min_interval, MAX(interval_year) as max_interval FROM multiple_winners)";
