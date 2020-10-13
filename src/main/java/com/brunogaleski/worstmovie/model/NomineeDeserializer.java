@@ -68,7 +68,7 @@ public class NomineeDeserializer {
         } catch (NumberFormatException e) {
             LOGGER.warn("Not possible to parse " + yearString + " as a valid year, Value 0 will be used instead");
         } catch (InvalidYearException e) {
-            LOGGER.warn(e.getMessage() + ", value 0 will be used instead");
+            LOGGER.warn(e.getMessage());
         }
 
         return year;
